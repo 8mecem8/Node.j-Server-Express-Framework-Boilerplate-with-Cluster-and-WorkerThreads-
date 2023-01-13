@@ -1,13 +1,17 @@
 
+-------------How to run-------------
+
 yarn or npm i //To install all packages
 yarn run dev // to start the development server with nodemon
 yarn start // to start production server
 
+
+
 //**Please dont forget to create your own .env file and import all using config file located in ./Utilities/config.js
 
+//**Build Folder is for your Frontend files
 
-
-
+//**All db and related Models etc.. are just useful examples, Change them as your applicatin design require
 
 
 

@@ -6,7 +6,6 @@ const http = require('http')
 
 //Import Files
 const config = require('./Utilities/config')
-const logger = require('./Utilities/logger')
 const {mongo} = require('./Databases/MongoDb/mongoose.js')
 
 //Database------------------------------------------------------------------------------
@@ -17,5 +16,5 @@ const {mongo} = require('./Databases/MongoDb/mongoose.js')
 const server = http.createServer(app)
 
 
-server.listen(config.PORT, () => { logger.info(`\n`,`${"\x1b[42m"} Server ${"\x1b[0m"}is running at http://localhost:${config.PORT} \n`)}) // start '\x1b[42m' and finish "\033[0m"  used to change font colors
+server.listen(config.PORT, () => { console.log(`\n`,`${"\x1b[42m"} Server ${"\x1b[0m"}is running at http://localhost:${config.PORT} \n`)}) // start '\x1b[42m' and finish "\033[0m"  used to change font colors
 

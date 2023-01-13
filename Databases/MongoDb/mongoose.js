@@ -7,7 +7,7 @@ exports.mongo = async () =>
 try{   
                   mongoose.set('strictQuery', false)// DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to `false` by default in Mongoose 7
 
-     return await mongoose.connect( config.DB_C, {keepAlive: true,useNewUrlParser: true,useUnifiedTopology: true}, 
+     return await mongoose.connect( config.DB_C, {keepAlive: true,useNewUrlParser: true,useUnifiedTopology: true},  //instead of using a callback func we can use mongoose.connection.once("once",()=>{console.log("")})
       (...arg)=>{ console.log(` ${"\x1b[42m"} Mongoose Client ${"\x1b[0m"}  has connected to Host`,'\x1b[32m', "\n\n Connnection details :", "\033[0m"  ); // start '\x1b[32m' and finish "\033[0m"  used to change font colors
                   
                         [arg]?.map(arg => 

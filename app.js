@@ -9,6 +9,7 @@ const compression = require('compression')
 //Import Files
 const middleware = require('./utilities/middleware')
 
+//Decleration Variables
 const app = express()
 
 
