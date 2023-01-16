@@ -27,6 +27,7 @@ app.use(compression({}))
 app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json({ strict: false,limit: '500mb' }))
+app.use(express.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, '/build')))
 app.use(express.static(path.join(__dirname, '/404')))
 app.use(middleware.requestLogger)
@@ -50,7 +51,7 @@ app.get('/',(req,res,next)=>
     
 }) 
 
-//404 error middleware, **** must be at the end of all other routes
+//404 error middleware, **** must be at the end of all other routes ****
 app.use(middleware.unknownEndpoint)
 
 module.exports = app

@@ -6,12 +6,14 @@ yarn run dev // to start the development server with nodemon
 yarn start // to start production server
 
 
+--Since my priority is MongoDb, all boilerplate settings is set for MongoDb 
 
-//**Please dont forget to create your own .env file and import all using config file located in ./Utilities/config.js
+--Please dont forget to create your own .env file and import all using config file located in ./Utilities/config.js
 
-//**Build Folder is for your Frontend files
+--Build Folder is for your Frontend files
 
-//**All db and related Models etc.. are just useful examples, Change them as your applicatin design require
+--All db, related Models and routes,endpoints etc.. are just useful examples, change them as your applicatin design require
+
 
 
 
