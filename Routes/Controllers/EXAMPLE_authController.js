@@ -1,4 +1,4 @@
-const User = require('../../Models/userModel')
+const User = require('../../Databases/MongoDb/Models/userModel')
 
 
 const createUpdateUser = async (req,res,next)=>

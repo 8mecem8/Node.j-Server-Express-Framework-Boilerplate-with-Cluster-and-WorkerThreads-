@@ -18,7 +18,7 @@ const {
 
 
 // imported Middlewares-------------------------------------------------------------------------
-const { authCheck,adminCheck } = require('../Middlewares/authMWs')
+const { authCheck,adminCheck } = require('../Middlewares/EXAMPLE_authMWs')
 
 
 

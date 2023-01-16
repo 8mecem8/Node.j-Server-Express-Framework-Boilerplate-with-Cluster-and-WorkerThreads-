@@ -1,22 +1,21 @@
-const stripeRouter = require('express').Router()
+const mainpageRouter = require('express').Router()
 
 
 
 // imported Controllers-------------------------------------------------------------------------
-const { createPaymentIntent } = require('../Controllers/stripeController');
+const { serverMainPage } = require('../Controllers/mainPageController');
+
 
 
 // imported Middlewares-------------------------------------------------------------------------
-const { authCheck} = require('../Middlewares/authMWs');
+/* currenly no need for middleware */
 
 
 
 // Routes-------------------------------------------------------------------------
-stripeRouter.post("/create-payment-intent", authCheck, createPaymentIntent);
+mainpageRouter.get("/", serverMainPage);
 
 
 
 
-
-
-module.exports = stripeRouter
+module.exports = mainpageRouter

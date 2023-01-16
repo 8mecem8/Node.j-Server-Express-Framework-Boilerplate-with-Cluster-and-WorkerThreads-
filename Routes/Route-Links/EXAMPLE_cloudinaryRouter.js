@@ -1,10 +1,10 @@
 const cloudinaryRouter = require('express').Router()
 
 // imported Middlewares-------------------------------------------------------------------------
-const { authCheck,adminCheck } = require('../Middlewares/authMWs')
+const { authCheck,adminCheck } = require('../Middlewares/EXAMPLE_authMWs')
 
 // controllers
-const { upload, remove } = require("../Controllers/cloudinaryController")
+const { upload, remove } = require("../Controllers/EXAMPLEcloudinaryController")
 
 
 

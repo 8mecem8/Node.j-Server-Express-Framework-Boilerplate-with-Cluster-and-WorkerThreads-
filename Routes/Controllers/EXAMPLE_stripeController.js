@@ -1,7 +1,7 @@
-const userModel = require('../../Models/userModel')
-const cartModel = require('../../Models/cartModel')
-const productModel = require('../../Models/productModel');
-const stripe = require("stripe")(process.env.STRIPE_SECRET);
+const userModel = require('../../Databases/MongoDb/Models/userModel')
+const cartModel = require('../../Databases/MongoDb/Models/cartModel')
+const productModel = require('../../Databases/MongoDb/Models/productModel');
+//const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 
 
