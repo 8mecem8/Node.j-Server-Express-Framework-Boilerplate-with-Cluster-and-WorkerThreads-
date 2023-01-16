@@ -19,13 +19,12 @@ const app = express()
 app.use(compression({}))
 app.use(cors())
 app.use(morgan("dev"))
-app.use(express.json({ strict: false,limit: '500mb' }))
-app.use(express.urlencoded({extended:false}));
+app.use(express.json({ strict: false,limit: '500mb' }))  // to support JSON-encoded bodies
+app.use(express.urlencoded({extended:false})); // to support URL-encoded bodies
 //app.use(express.static(path.join(__dirname, '/build'))) //this middleware commented because instead of serving html files as default, I set the route method
 app.use(express.static(path.join(__dirname, '/404')))
 app.use(middleware.requestLogger)
 app.use(middleware.errorHandler)
-//app.use('/uploads', express.static(path.join(__dirname, '/../uploads'))) //this middleware is for uploading files using multer npm package
 
 
 

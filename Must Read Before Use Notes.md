@@ -6,6 +6,11 @@ yarn run dev // to start the development server with nodemon
 yarn start // to start production server
 
 
+
+index.js > app.js
+
+
+
 --Since my priority is MongoDb, all boilerplate settings is set for MongoDb 
 
 --Please dont forget to create your own .env file and import all using config file located in ./Utilities/config.js
@@ -13,6 +18,18 @@ yarn start // to start production server
 --Build Folder is for your Frontend files
 
 --All db, related Models and routes,endpoints etc.. are just useful examples, change them as your applicatin design require
+
+
+
+
+
+-------------NPM Libaries/Packages-------------
+
+#Cloudinary is for developers , better way to upload, manage and deliver tens of thousands to millions of images and videos. Using artificial intelligence (AI), automation, and advanced patent-pending image and video processing capabilities
+
+#Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+
+
 
 
 
