@@ -1,4 +1,9 @@
 
+
+***--------This project is still under Development !!, some premade settings can NOT perform as you expected, Plese dont hesitate to share your thoughts / ideas / suggestions--------***
+
+
+
 -------------How to run-------------
 
 yarn or npm i //To install all packages
@@ -7,9 +12,14 @@ yarn start // to start production server
 
 
 
-index.js > app.js
+#main file as index.js > app.js
 
 
+
+
+
+
+--This boilerplate is designed for heavy computations/ high traffic requestes
 
 --Since my priority is MongoDb, all boilerplate settings is set for MongoDb 
 
@@ -29,7 +39,7 @@ index.js > app.js
 
 #Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
 
-
+#Morgan HTTP request logger middleware for node.js
 
 
 
@@ -51,6 +61,15 @@ yarn add --dev nodemon@latest --verbose or npm i --save-dev nodemon@latest --ver
 
 
 
+
+
+#If you're running a Windows OS and running via a .js file you'll need to set the UV_THREADPOOL_SIZE prior to calling the script via node.
+
+Example in cmd: SET UV_THREADPOOL_SIZE=2 && node my-file-to-run.js (no spaces around the =)
+
+Or in Powershell: $env:UV_THREADPOOL_SIZE = 2 && node my-file-to-run.js
+
+***Why ???? If You don't set this env variable, limited to a threadpool of 4 threads, which is the default size of the threadpool.***
 
 
 
@@ -80,3 +99,9 @@ Here is an example:
     ,   "moment": "latest"
     ,   "express-device": "latest"
 },
+
+
+
+
+
+

@@ -3,7 +3,6 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const morgan = require('morgan')
-const mongoose = require('mongoose');
 const compression = require('compression')
 
 //Import Files

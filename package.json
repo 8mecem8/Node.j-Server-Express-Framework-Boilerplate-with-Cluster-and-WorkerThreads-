@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js  --verbose",
-    "start": "node index.js  --verbose",
+    "dev": "SET UV_THREADPOOL_SIZE=8 && nodemon index.js  --verbose",
+    "start": "SET UV_THREADPOOL_SIZE=8 && node index.js  --verbose",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
   },
   "license": "MIT",
