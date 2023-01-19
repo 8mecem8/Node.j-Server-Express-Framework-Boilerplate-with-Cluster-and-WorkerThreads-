@@ -10,9 +10,10 @@ body {
   background-color: #000000;
   background-image: radial-gradient(#11581E, #041607), url("noise.webp");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   font-family: 'Inconsolata', Helvetica, sans-serif;
   font-size: 1.5rem;
+  overflow: hidden;
   color: rgba(128, 255, 128, 0.8);
   text-shadow:
       0 0 1ex rgba(51, 255, 51, 1),
