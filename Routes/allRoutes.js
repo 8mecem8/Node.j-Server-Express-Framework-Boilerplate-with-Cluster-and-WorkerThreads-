@@ -12,6 +12,8 @@ exports.allRoutes = (app)=>
     //Server Serve Main Web Page
     app.use('/',mainpageRouter)
     app.use('/postgresql',EXAMPLE_postgresqlRouter)
+
+    
     app.use('/heavy',EXAMLE_heavyProcessRouter)
     app.use('/heY',async (req,res,next)=>
     {

@@ -4,6 +4,8 @@ const cors = require('cors')
 const path = require('path')
 const morgan = require('morgan')
 const compression = require('compression')
+const bodyParser = require('body-parser')
+
 
 //Import Files
 const middleware = require('./utilities/middleware');
@@ -18,8 +20,8 @@ const app = express()
 app.use(compression({}))
 app.use(cors())
 app.use(morgan("dev"))
-app.use(express.json({ strict: false,limit: '500mb' }))  // to support JSON-encoded bodies
-app.use(express.urlencoded({extended:false})); // to support URL-encoded bodies
+app.use(bodyParser.json());  // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({ extended: false })); // to support URL-encoded bodies
 //app.use(express.static(path.join(__dirname, '/build'))) //this middleware commented because instead of serving html files as default, I set the route method
 app.use(express.static(path.join(__dirname, '/404')))
 app.use(middleware.requestLogger)
