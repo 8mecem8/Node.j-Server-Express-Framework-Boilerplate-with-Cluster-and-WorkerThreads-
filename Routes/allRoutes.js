@@ -9,12 +9,24 @@ const EXAMLE_heavyProcessRouter = require("./Route-Links/EXAMLE_heavyProcessRout
 
 exports.allRoutes = (app)=>
 {   
-    //Server Serve Main Web Page
+    // @route:   /
+    // @desc:    Server Serve Main Web Page
+    // @access:  Public
     app.use('/',mainpageRouter)
+
+    // @route:   /postgresql
+    // @desc:    shows connection to PostgreSQL Server
+    // @access:  Public
     app.use('/postgresql',EXAMPLE_postgresqlRouter)
 
-    
+    // @route:   /heavy
+    // @desc:    this is simple test for Node.js concorrency
+    // @access:  Public
     app.use('/heavy',EXAMLE_heavyProcessRouter)
+
+    // @route:   /heY
+    // @desc:    this is simple test for Node.js concorrency
+    // @access:  Public
     app.use('/heY',async (req,res,next)=>
     {
         let counter = 0
@@ -28,6 +40,14 @@ exports.allRoutes = (app)=>
         if(limit == counter){res.send(`${counter} iterations completed in hey ${new Date().toString().slice(0,24)} \n`)}
     })
 
+    // @route:   /api/create-payment-intent
+    // @desc:    Example of Stripe payment endpoint
+    // @access:  Public
     app.use("/api/", EXAMPLE_stripeRouter)
+
+    // @route:   /api/auth/create-&-update-user
+    //           /api/current-user 
+    // @desc:    Example of Stripe payment endpoint
+    // @access:  Public
     app.use("/api/auth", EXAMPLE_authRouter);
 }
