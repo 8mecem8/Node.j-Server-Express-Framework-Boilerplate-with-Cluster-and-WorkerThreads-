@@ -1,6 +1,6 @@
 
 
-***--------This project is still under Development !!, some premade settings can NOT perform as you expected, Plese dont hesitate to share your thoughts / ideas / suggestions--------***
+***--------This project is still under Development !!, some premade settings can NOT perform as you expected, Please dont hesitate to share your thoughts / ideas / suggestions--------***
 
 
 
